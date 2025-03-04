@@ -156,7 +156,7 @@ class _HomeScreenState extends State<HomeScreen> {
         SizedBox(height: size.height * 0.02),
         FadeInUp(
           from: 30,
-          child: Text("You Have Done All Tasks!"),
+          child: const Text("You Have Done All Tasks!"),
         ),
       ],
     );
