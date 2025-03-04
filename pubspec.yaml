@@ -1,0 +1,53 @@
+name: task_management_app
+description: "A new Flutter project."
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.3.1 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.6
+  hive_flutter: ^1.1.0
+  hive: ^2.2.3
+  uuid: ^4.4.0
+  animate_do: ^3.3.4
+  intl: ^0.18.1
+  panara_dialogs: ^0.1.5
+  lottie: ^3.1.2
+  ftoast: ^2.0.0
+  flutter_slider_drawer: ^2.1.3
+  flutter_cupertino_date_picker_fork: ^1.0.7
+  google_fonts: ^6.2.0
+  flutter_screenutil: ^5.9.0
+  easy_localization: ^3.0.5
+  json_serializable: ^6.8.0
+  hive_generator: ^2.0.1
+  awesome_dialog: ^3.2.0
+
+dev_dependencies:
+  flutter_launcher_icons: ^0.13.1
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+  build_runner: ^2.4.9
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/th.jpeg"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/translations/
+    - assets/images/
+    - assets/lottie/
