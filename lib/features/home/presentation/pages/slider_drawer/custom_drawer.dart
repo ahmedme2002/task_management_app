@@ -33,35 +33,25 @@ class _CustomDrawerState extends State<CustomDrawer> {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 90),
       decoration: const BoxDecoration(
-          gradient: LinearGradient(
-        colors: AllColors.primaryGradientColor,
-        begin: Alignment.topLeft,
-        end: Alignment.bottomRight,
-      )),
+        gradient: LinearGradient(
+          colors: AllColors.primaryGradientColor,
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+      ),
       child: Column(
         children: [
-          CircleAvatar(
+          const CircleAvatar(
             radius: 50,
             backgroundImage: AssetImage("assets/images/profile3.jpg"),
           ),
-          SizedBox(
-            height: size.height * 0.020,
-          ),
-          Text(
-            "Ahmed ",
-            style: pp16w,
-          ),
-          SizedBox(
-            height: size.height * 0.010,
-          ),
-          Text(
-            "Junior flutter dev ",
-            style: pp14W,
-          ),
-          Container(
-            padding: const EdgeInsets.all(10),
-            width: double.infinity,
-            height: size.height * 0.60,
+          SizedBox(height: size.height * 0.020),
+          Text("Ahmed", style: pp16w),
+          SizedBox(height: size.height * 0.010),
+          Text("Junior flutter dev", style: pp14W),
+          const SizedBox(height: 10), // Add spacing
+          Expanded(
+            // This will allow ListView.builder to take available space
             child: ListView.builder(
               itemCount: icons.length,
               itemBuilder: (context, index) {
@@ -70,19 +60,13 @@ class _CustomDrawerState extends State<CustomDrawer> {
                     log("${texts[index]} YOUR TAB");
                   },
                   child: ListTile(
-                    leading: Icon(
-                      icons[index],
-                      color: AllColors.white,
-                    ),
-                    title: Text(
-                      texts[index],
-                      style: pp14W,
-                    ),
+                    leading: Icon(icons[index], color: AllColors.white),
+                    title: Text(texts[index], style: pp14W),
                   ),
                 );
               },
             ),
-          )
+          ),
         ],
       ),
     );
